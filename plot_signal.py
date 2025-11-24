@@ -17,12 +17,12 @@ for col in ("C", "F"):
     if col not in df.columns:
         raise ValueError(f"Missing column '{col}' in {csv_path}")
 
-# Plot C vs F
+# Plot C as a function of F (C(F))
 plt.figure(figsize=(8, 5))
-plt.plot(df["C"], df["F"], marker="o", linestyle="-", color="steelblue")
-plt.xlabel("C")
-plt.ylabel("F")
-plt.title("C vs F")
+plt.plot(df["F"], df["C"], marker="o", linestyle="-", color="steelblue")
+plt.xlabel("F")
+plt.ylabel("C")
+plt.title("C as a function of F")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
