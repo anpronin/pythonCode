@@ -26,3 +26,9 @@ plt.title("C as a function of F")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+# Export pdf of the plot
+output_pdf_path = csv_path.with_suffix(".pdf")
+plt.savefig(output_pdf_path)
+print(f"Plot saved to {output_pdf_path}")
+
