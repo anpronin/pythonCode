@@ -19,7 +19,7 @@ for col in ("C", "F"):
 
 # Plot C as a function of F (C(F))
 plt.figure(figsize=(8, 5))
-plt.plot(df["F"], df["C"], marker="o", linestyle="-", color="steelblue")
+plt.plot(df["F"], df["C"], color="red", linestyle="--", marker="o", markersize=4)
 plt.xlabel("F")
 plt.ylabel("C")
 plt.title("C as a function of F")
