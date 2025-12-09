@@ -25,10 +25,19 @@ plt.ylabel("C")
 plt.title("C as a function of F")
 plt.grid(True)
 plt.tight_layout()
-plt.show()
 
-# Export pdf of the plot
+# Export pdf of the plot (must be before plt.show())
 output_pdf_path = csv_path.with_suffix(".pdf")
 plt.savefig(output_pdf_path)
 print(f"Plot saved to {output_pdf_path}")
+
+plt.show()
+
+# verify the output file exists
+if not output_pdf_path.exists():
+    raise FileNotFoundError(f"Failed to create output file: {output_pdf_path}") 
+else:
+    print(f"Output file verified: {output_pdf_path}")   
+
+
 
